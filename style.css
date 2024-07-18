@@ -127,12 +127,6 @@
             width: 90vw;
         }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .product-img {
             content: url(image-product-mobile.jpg);
             width: 100%;
