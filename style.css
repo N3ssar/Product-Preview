@@ -1,0 +1,146 @@
+    :root {
+        --font-size-14: 14px;
+        --color-Dark-cyan: hsl(158, 36%, 37%);
+        --color-Cream: hsl(30, 38%, 92%);
+        --color-Very-dark-blue: hsl(212, 21%, 14%);
+        --color-Dark-grayish-blue: hsl(228, 12%, 48%);
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: var(--font-size-14);
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh;
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--color-Cream);
+    }
+
+    .product {
+        display: flex;
+        width: 600px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-image {
+        flex-grow: 1;
+    }
+
+    .product-img {
+        width: 50%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .product-info {
+        padding: 1.5rem;
+    }
+
+
+    .product-type {
+        font-size: .9rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        color: var(--color-Dark-grayish-blue);
+    }
+
+    .product-banner {
+        font-family: "Fraunces", serif;
+        color: var(--color-Very-dark-blue);
+        font-size: 3rem;
+    }
+
+    .product-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: var(--color-Dark-grayish-blue);
+    }
+
+    .product-discount,
+    .product-banner,
+    .product-description {
+        margin: 1rem 0;
+    }
+
+    .product-price-new {
+        color: var(--color-Dark-cyan);
+        display: inline-block;
+        font-family: "Fraunces", serif;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+
+    .product-price {
+        display: flex;
+        align-items: center;
+        margin: .4rem 0 1.2rem;
+    }
+
+    p {
+        display: inline-block;
+    }
+
+    .product-price-old {
+        font-size: .8rem;
+        text-decoration: line-through;
+        margin-left: 2rem;
+
+    }
+
+    .product-buy {
+        background-color: var(--color-Dark-cyan);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        width: 95%;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .product-buy:hover {
+        background-color: rgb(7, 49, 18)
+    }
+
+    i {
+        margin-right: .5rem;
+    }
+
+    @media (max-width:500px) {
+        .product {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90vw;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-img {
+            content: url(image-product-mobile.jpg);
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            flex-shrink: 1;
+        }
+
+        html {
+            font-size: 18px;
+        }
+    }
